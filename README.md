@@ -98,7 +98,23 @@ The research evaluates nine distinct intraday strategies, categorized into three
 
 ***
 
+
+## Technical Details of the Experiments
+
+### Computational Resources and Data
+The experiments were conducted in a cloud environment which provided access to server and GPU resources. The specific configuration included **32 vCPUs**, **128 GB RAM**, and an **NVIDIA A100 GPU**. To efficiently process large volumes of data and parallelize computations, the **Dask** framework was used with a `LocalCluster` configuration.
+
+The training data for the **Temporal Fusion Transformer** model consisted of a three-month segment of one-minute historical data for each stock in the NASDAQ-100 index. The entire dataset for optimization and final simulation covered 9 months, which for a single instrument represented approximately 800,000 data points (rows).
+
+### Most Computationally Demanding Passages
+The greatest computational load came from two main phases of the project:
+
+1.  **Predictive Model Training**: The training of the **Temporal Fusion Transformer** model to predict trading volume was the most time-consuming and hardware-intensive part, especially due to the complex architecture of the model.
+2.  **Backtesting and Optimization**: The extensive hyperparameter optimization using **Batched Random Search** and the subsequent final simulation on the 3-month test dataset required significant computational resources. This led to the need to simplify the original plan; the intended daily retraining of the model proved to be computationally infeasible.
+
+***
+
 ## 🔗 Links
 
--   **Thesis PDF**: [Implementation of a trading algorithm with a focus on volume profiles.pdf](<INSERT_LINK_TO_YOUR_PDF_HERE>)
+-   **Thesis PDF**: [Implementation of a trading algorithm with a focus on volume profiles.pdf](<https://github.com/vitax10/kohout-thesis-volume-profiles/blob/main/kohout_thesis.pdf>)
 -   **Dataset**: The NASDAQ-100 dataset used for this research is available for download on the [Releases page](<INSERT_LINK_TO_YOUR_GITHUB_RELEASE_HERE>).
