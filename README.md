@@ -117,4 +117,4 @@ The greatest computational load came from two main phases of the project:
 ## 🔗 Links
 
 -   **Thesis PDF**: [Implementation of a trading algorithm with a focus on volume profiles.pdf](<https://github.com/vitax10/kohout-thesis-volume-profiles/blob/main/kohout_thesis.pdf>)
--   **Dataset**: The NASDAQ-100 dataset used for this research is available for download on the [Releases page](<INSERT_LINK_TO_YOUR_GITHUB_RELEASE_HERE>).
+-   **Dataset**: The NASDAQ-100 dataset used for this research is available on [Google Drive](<https://drive.google.com/file/d/1qFzDVUuTpgXTpnoFhb5HLa0kaxJ0t8Xc/view?usp=sharing>).
