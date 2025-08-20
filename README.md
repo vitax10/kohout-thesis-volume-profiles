@@ -16,7 +16,7 @@ It is concluded that the primary contribution of adding volume-based complexity 
 
 ***
 
-## 🚀 Project Pipeline & Structure
+## Project Pipeline & Structure
 
 The project follows a sequential pipeline, with each notebook and script representing a key stage in the research process, from data collection to final evaluation.
 
