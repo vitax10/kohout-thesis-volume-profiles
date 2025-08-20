@@ -1,0 +1,72 @@
+# Generated requirements.txt — consolidated from all .py and .ipynb imports
+# Review and pin versions as needed before use. Some packages require system
+# libraries (TA-Lib) or have ambiguous PyPI names — see notes below.
+
+# Core data / ML
+pandas
+numpy
+scikit-learn
+scipy
+numba
+
+# Distributed / big-data
+dask[distributed]
+pyarrow
+
+# Deep learning / forecasting
+torch
+tensorflow
+pytorch-lightning
+neuralforecast
+
+# Orchestration / tuning / optimization
+ray
+optuna
+
+# Visualization & analysis
+matplotlib
+seaborn
+vectorbt
+quantstats
+
+# Cloud / Google APIs
+google-cloud-storage
+google-generative-ai
+vertexai
+# Note: `vertexai` may be provided by `google-cloud-aiplatform` depending on
+# the client version; if imports fail, try installing `google-cloud-aiplatform`.
+
+# Utilities / HTTP / retry
+requests
+tenacity
+holidays
+psutil
+
+# Other/Pipeline
+pyarrow
+
+# Finance / specialty
+sec-api
+# Note: the import is `from sec_api import QueryApi` — the PyPI package is
+# commonly named `sec-api`. If `pip install sec-api` fails, check the package
+# you originally installed.
+
+# TA-Lib (technical-analysis C library)
+# This requires the system library libta-lib and a matching Python wheel.
+# On many systems you must install the system package (e.g., `apt install
+# libta-lib0 libta-lib-dev`) before `pip install TA-Lib` will work.
+TA-Lib
+
+# Packaging/runtime
+setuptools
+jupyter_core
+
+# Notes
+# - `google.generativeai` was added as `google-generative-ai` above. If your
+#   environment uses a different package name, replace accordingly.
+# - `vertexai` may be part of `google-cloud-aiplatform` for some releases.
+# - Many stdlib modules (json, os, sys, datetime, tempfile, glob, shutil,
+#   concurrent.futures, logging, pathlib, itertools, functools, traceback,
+#   io) are intentionally omitted from this file.
+# - Pin exact versions by running `pip freeze` in your working env and
+#   replacing the package names above with `name==x.y.z` entries.
